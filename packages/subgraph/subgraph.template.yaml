@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: Controller
-    network: {{network}}
+    network: mainnet
     source:
-      address: "{{Controller}}"
+      address: "0x64187ae08781B09368e6253F9E94951243A493D5"
       abi: Controller
-      startBlock: {{Controller-start-block}}
+      startBlock: 13982541
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -78,11 +78,11 @@ dataSources:
       file: ./src/controller.ts
   - kind: ethereum/contract
     name: CrabStrategy
-    network: {{network}}
+    network: mainnet
     source:
-      address: "{{CrabStrategyDeployment}}"
+      address: "0xf205ad80BB86ac92247638914265887A8BAa437D"
       abi: CrabStrategy
-      startBlock: {{CrabStrategyDeployment-start-block}}
+      startBlock: 14048622 
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6

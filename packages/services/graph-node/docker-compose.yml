@@ -17,7 +17,7 @@ services:
       postgres_pass: let-me-in
       postgres_db: graph-node
       ipfs: "ipfs:5001"
-      ethereum: "${ETHEREUM_URL}"
+      ethereum: "ropsten:paste your infura endpoint here"
       GRAPH_LOG: info
   ipfs:
     image: ipfs/go-ipfs:v0.4.23

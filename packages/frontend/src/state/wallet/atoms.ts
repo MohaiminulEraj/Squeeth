@@ -12,8 +12,8 @@ const defaultWeb3 =
   useAlchemy === 'true'
     ? new Web3(`https://eth-mainnet.alchemyapi.io/v2/${process.env.NEXT_PUBLIC_ALCHEMY_API_KEY}`)
     : usePokt === 'true'
-    ? new Web3(`https://eth-mainnet.gateway.pokt.network/v1/lb/${process.env.NEXT_PUBLIC_POKT_ID}`)
-    : new Web3(`https://mainnet.infura.io/v3/${process.env.NEXT_PUBLIC_INFURA_API_KEY}`)
+      ? new Web3(`https://eth-mainnet.gateway.pokt.network/v1/lb/${process.env.NEXT_PUBLIC_POKT_ID}`)
+      : new Web3(`https://ropsten.infura.io/v3/${process.env.NEXT_PUBLIC_INFURA_API_KEY}`)
 
 export const transactionDataAtom = atomWithReset<TransactionData | null>(null)
 export const transactionLoadingAtom = atom((get) => {
@@ -36,7 +36,7 @@ export const transactionLoadingAtom = atom((get) => {
 })
 export const cancelTransactionAtom = atomWithReset<boolean>(false)
 export const addressAtom = atom<string | null>(null)
-export const networkIdAtom = atom(Networks.MAINNET)
+export const networkIdAtom = atom(Networks.ROPSTEN)
 export const web3Atom = atom(defaultWeb3)
 export const onboardAtom = atom<API | null>(null)
 export const notifyAtom = atom<NotifyAPI | null>(null)
